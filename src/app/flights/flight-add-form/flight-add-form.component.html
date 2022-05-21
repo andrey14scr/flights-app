@@ -1,0 +1,33 @@
+<form (ngSubmit)="onSubmit()" #flightForm="ngForm">
+  <div class="form-group">
+    <label for="from">From</label>
+    <input type="text" class="form-control" id="from" [(ngModel)]="model.from" name="from">
+    <div [hidden]="!(submitted && this.isValidString(model.from))" class="alert alert-danger">Source is required</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="to">To</label>
+    <input type="text" class="form-control" id="to" [(ngModel)]="model.to" name="to">
+    <div [hidden]="!(submitted && this.isValidString(model.to))" class="alert alert-danger">Destination is required</div>
+  </div>
+
+  <div class="date">
+    <label for="alterEgo">Date</label>
+    <input type="date" class="form-control" id="date" [(ngModel)]="model.date" name="date">
+    <div [hidden]="!(submitted && model.date === undefined)" class="alert alert-danger">Date is required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="luggage">Luggage</label>
+    <input type="number" class="form-control" id="luggage" [(ngModel)]="model.luggage" name="luggage">
+    <div [hidden]="!(submitted && this.isValidNumber(model.luggage))" class="alert alert-danger">Lugagge is required and couldn't be less than 0</div>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" class="form-control" id="price" [(ngModel)]="model.price" name="price">
+    <div [hidden]="!(submitted && this.isValidNumber(model.price))" class="alert alert-danger">Price is required and couldn't be less than 0</div>
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

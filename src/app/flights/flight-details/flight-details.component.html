@@ -1,0 +1,25 @@
+<div class="p-2 m-2 flight-detail rounded">
+  <h5>Deatailed information:</h5>
+  <table style="width:100%">
+    <tr>
+      <th>Date:</th>
+      <td>{{flight.date | date}}</td>
+    </tr>
+    <tr>
+      <th>From:</th>
+      <td>{{flight.from}}</td>
+    </tr>
+    <tr>
+      <th>To:</th>
+      <td>{{flight.to}}</td>
+    </tr>
+    <tr>
+      <th>Luggage:</th>
+      <td>{{flight.luggage}} kg</td>
+    </tr>
+    <tr>
+      <th>Price:</th>
+      <td>$ {{flight.price}}</td>
+    </tr>
+  </table>
+</div>

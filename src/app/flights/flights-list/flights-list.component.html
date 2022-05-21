@@ -1,0 +1,8 @@
+<div *ngFor="let flight of flights">
+  <div class="p-2 m-2 flight-card rounded" (click)="onFlightSelect($event, flight)">
+    <div><strong>#{{flight.id}}</strong> from <i>{{flight.from}}</i> to <i>{{flight.to}}</i></div>
+  </div>
+  <ng-container *ngIf="flight==selectedFlight">
+    <app-flight-details [flight]="flight"></app-flight-details>
+  </ng-container>
+</div>  

@@ -1,0 +1,10 @@
+.flight-card {
+  background-color: rgb(192, 225, 255);
+}
+
+.flight-card:hover {
+  background-color: rgb(255, 255, 201);
+  border: 1px solid;
+  border-color: black;
+  cursor: pointer;
+}
